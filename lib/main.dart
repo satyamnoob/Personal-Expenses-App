@@ -20,12 +20,12 @@ class MyApp extends StatelessWidget {
         ),
         fontFamily: 'Quicksand',
         textTheme: ThemeData.light().textTheme.copyWith(
-              headline6: TextStyle(
-                fontFamily: 'OpenSans',
-                fontWeight: FontWeight.bold,
-                fontSize: 18,
-              ),
+            headline6: TextStyle(
+              fontFamily: 'OpenSans',
+              fontWeight: FontWeight.bold,
+              fontSize: 18,
             ),
+            button: TextStyle(color: Colors.white)),
         appBarTheme: AppBarTheme(
           titleTextStyle: TextStyle(
             fontFamily: 'OpenSans',
@@ -47,60 +47,60 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   // String? titleInput;
   final List<Transaction> _userTransactions = [
-    // Transaction(
-    //   id: 't1',
-    //   title: "New Shoes",
-    //   amount: 600,
-    //   date: DateTime.now(),
-    // ),
-    // Transaction(
-    //   id: 't2',
-    //   title: "Mouse",
-    //   amount: 450,
-    //   date: DateTime.now(),
-    // ),
-    // Transaction(
-    //   id: 't1',
-    //   title: "New Shoes",
-    //   amount: 600,
-    //   date: DateTime.now(),
-    // ),
-    // Transaction(
-    //   id: 't1',
-    //   title: "New Shoes",
-    //   amount: 600,
-    //   date: DateTime.now(),
-    // ),
-    // Transaction(
-    //   id: 't2',
-    //   title: "Mouse",
-    //   amount: 450,
-    //   date: DateTime.now(),
-    // ),
-    // Transaction(
-    //   id: 't1',
-    //   title: "New Shoes",
-    //   amount: 600,
-    //   date: DateTime.now(),
-    // ),
-    // Transaction(
-    //   id: 't1',
-    //   title: "New Shoes",
-    //   amount: 600,
-    //   date: DateTime.now(),
-    // ),
-    // Transaction(
-    //   id: 't2',
-    //   title: "Mouse",
-    //   amount: 450,
-    //   date: DateTime.now(),
-    // ),
-    // Transaction(
-    //   id: 't1',
-    //   title: "New Shoes",
-    //   amount: 600,
-    //   date: DateTime.now(),
-    // ),
+    Transaction(
+      id: 't1',
+      title: "New Shoes",
+      amount: 600,
+      date: DateTime.now(),
+    ),
+    Transaction(
+      id: 't2',
+      title: "Mouse",
+      amount: 450,
+      date: DateTime.now(),
+    ),
+    Transaction(
+      id: 't1',
+      title: "New Shoes",
+      amount: 600,
+      date: DateTime.now(),
+    ),
+    Transaction(
+      id: 't1',
+      title: "New Shoes",
+      amount: 600,
+      date: DateTime.now(),
+    ),
+    Transaction(
+      id: 't2',
+      title: "Mouse",
+      amount: 450,
+      date: DateTime.now(),
+    ),
+    Transaction(
+      id: 't1',
+      title: "New Shoes",
+      amount: 600,
+      date: DateTime.now(),
+    ),
+    Transaction(
+      id: 't1',
+      title: "New Shoes",
+      amount: 600,
+      date: DateTime.now(),
+    ),
+    Transaction(
+      id: 't2',
+      title: "Mouse",
+      amount: 450,
+      date: DateTime.now(),
+    ),
+    Transaction(
+      id: 't1',
+      title: "New Shoes",
+      amount: 600,
+      date: DateTime.now(),
+    ),
   ];
 
   List<Transaction> get _recentTransactions {
@@ -113,12 +113,12 @@ class _MyHomePageState extends State<MyHomePage> {
     }).toList();
   }
 
-  void _addNewTransaction(String title, double amount) {
+  void _addNewTransaction(String title, double amount, DateTime chosenDate) {
     final newTx = Transaction(
-      id: DateTime.now().toString(),
+      id: chosenDate.toString(),
       title: title,
       amount: amount,
-      date: DateTime.now(),
+      date: chosenDate,
     );
 
     setState(() {
